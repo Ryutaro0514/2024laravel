@@ -14,7 +14,7 @@ class Usercontroller extends Controller
     }
     public function store(Request $request){
         User::query()->create([
-            "name"=>$request->neme,
+            "name"=>$request->name,
             "password"=>Hash::make($request->password)
         ]);
         return redirect(route("login"));
